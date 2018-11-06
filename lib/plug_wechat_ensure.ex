@@ -23,6 +23,7 @@ defmodule PlugWechat.Ensure do
         conn
         |> put_resp_content_type("text/plain")
         |> send_resp(200, echostr)
+        |> halt()
 
       _ ->
         conn |> halt()
