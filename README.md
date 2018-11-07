@@ -17,7 +17,8 @@ def deps do
   ]
 end
 ```
-然后在你的控制器文件中调用 `PlugWechat.Ensure`：
+
+在控制器文件中调用 `PlugWechat.Ensure` 确保消息来源：
 
 ```elixir
 plug PlugWechat.Ensure, [token: "wechat token here"] when action in [:setup]
@@ -25,7 +26,15 @@ def setup(_, ) do
 end
 ```
 
+此外，还需要在 `endpoint.ex` 文件中增加解析器如下：
+
+```elixir
+plug Plug.Parsers,
+    parsers: [:urlencoded, :multipart, :json, PlugWechat.Parsers.WECHAT],
+```
+
+这样，微信的 xml 消息体就会被解析为 map。
+
 ## 文档
 
 [https://hexdocs.pm/plug_wechat](https://hexdocs.pm/plug_wechat)。
-
