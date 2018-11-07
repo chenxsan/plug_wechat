@@ -21,7 +21,8 @@ defmodule PlugWechat.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:sweet_xml, "~> 0.6.5"}
     ]
   end
 end
