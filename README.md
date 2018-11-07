@@ -1,6 +1,6 @@
 # PlugWechat
 
-很不幸，微信公众号的消息是 [xml](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421140453) 格式，对我、PhoenixFramework 来说，json 都要更方便。
+很不幸，微信公众号的消息体是 [text/xml](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421140453) 格式，PhoenixFramework [默认并不解析 xml](https://hexdocs.pm/plug/Plug.Parsers.html#module-built-in-parsers)，也因此我们需要引入一个 xml 解析器。
 
 另外，我们还需要验证消息[来自于微信](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421135319)。
 
