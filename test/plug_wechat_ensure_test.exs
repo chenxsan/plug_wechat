@@ -1,5 +1,5 @@
 defmodule PlugWechat.EnsureTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   use Plug.Test
 
   test "conn is halted" do
