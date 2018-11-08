@@ -5,9 +5,12 @@ defmodule PlugWechat.MixProject do
     [
       app: :plug_wechat,
       version: "0.1.0",
+      description: "Plug for wechat with a xml parser",
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package(),
+      source_url: "https://github.com/chenxsan/plug_wechat"
     ]
   end
 
@@ -23,6 +26,15 @@ defmodule PlugWechat.MixProject do
     [
       {:plug_cowboy, "~> 2.0"},
       {:sweet_xml, "~> 0.6.5"}
+    ]
+  end
+
+  defp package() do
+    [
+      links: %{
+        "GitHub" => "https://github.com/chenxsan/plug_wechat"
+      },
+      licenses: ["MIT"]
     ]
   end
 end
