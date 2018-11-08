@@ -1,4 +1,7 @@
 defmodule PlugWechat.Ensure do
+  @moduledoc """
+  Ensure message coming from wechat
+  """
   import Plug.Conn
 
   def init(opts) do

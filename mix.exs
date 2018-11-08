@@ -25,7 +25,8 @@ defmodule PlugWechat.MixProject do
   defp deps do
     [
       {:plug_cowboy, "~> 2.0"},
-      {:sweet_xml, "~> 0.6.5"}
+      {:sweet_xml, "~> 0.6.5"},
+      {:ex_doc, "~> 0.19", only: :dev, runtime: false}
     ]
   end
 

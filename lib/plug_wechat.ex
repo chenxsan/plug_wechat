@@ -1,5 +1,5 @@
 defmodule PlugWechat do
   @moduledoc """
-  Documentation for PlugWechat.
+  Just a namespace.
   """
 end
