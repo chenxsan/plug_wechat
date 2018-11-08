@@ -34,7 +34,3 @@ plug Plug.Parsers,
 ```
 
 这样，微信的 xml 消息体就会被解析为 map。
-
-## 文档
-
-[https://hexdocs.pm/plug_wechat](https://hexdocs.pm/plug_wechat)。
