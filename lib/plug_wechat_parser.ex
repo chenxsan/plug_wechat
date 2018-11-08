@@ -45,6 +45,7 @@ defmodule PlugWechat.Parsers.WECHAT do
          |> Enum.reject(fn {_, v} ->
            is_nil(v) or (is_binary(v) and String.trim(v) == "")
          end)
+         |> Enum.map(fn {k, v} -> {Atom.to_string(k), v} end)
          |> Map.new(), conn}
 
       {:more, _data, conn} ->

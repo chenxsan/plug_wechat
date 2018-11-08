@@ -22,13 +22,13 @@ defmodule PlugWechat.Parsers.WECHATTest do
     <Content><![CDATA[12]]></Content>
     <MsgId>6621123340578104392</MsgId>
     </xml>) |> xml_conn() |> parse()
-    assert conn.params |> Map.get(:ToUserName) == "Sam"
-    assert conn.params |> Map.get(:FromUserName) == "Chen"
-    assert conn.params |> Map.get(:CreateTime) == 1_541_600_409
-    assert conn.params |> Map.get(:MsgType) == "text"
-    assert conn.params |> Map.get(:Content) == "12"
-    assert conn.params |> Map.get(:MsgId) == 6_621_123_340_578_104_392
-    assert conn.params |> Map.get(:Location_X) == nil
-    assert conn.params |> Map.get(:Event) == nil
+    assert conn.params |> Map.get("ToUserName") == "Sam"
+    assert conn.params |> Map.get("FromUserName") == "Chen"
+    assert conn.params |> Map.get("CreateTime") == 1_541_600_409
+    assert conn.params |> Map.get("MsgType") == "text"
+    assert conn.params |> Map.get("Content") == "12"
+    assert conn.params |> Map.get("MsgId") == 6_621_123_340_578_104_392
+    assert conn.params |> Map.get("Location_X") == nil
+    assert conn.params |> Map.get("Event") == nil
   end
 end
