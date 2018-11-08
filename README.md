@@ -13,7 +13,7 @@
 ```elixir
 def deps do
   [
-    {:plug_wechat, "~> 0.1.0"}
+    {:plug_wechat, "~> 0.2.0"}
   ]
 end
 ```

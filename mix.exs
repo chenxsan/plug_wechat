@@ -4,7 +4,7 @@ defmodule PlugWechat.MixProject do
   def project do
     [
       app: :plug_wechat,
-      version: "0.1.0",
+      version: "0.2.0",
       description: "Plug for wechat with a xml parser",
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
